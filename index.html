@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jarudet Mahae — IT Support Professional</title>
+    <meta name="description" content="Portfolio ของ Jarudet Mahae (จารุเดช) — IT Support Professional จากเชียงใหม่" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Sora', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                        mono: ['"IBM Plex Mono"', 'monospace'],
+                    },
+                    colors: {
+                        base: 'var(--base)', surface: 'var(--surface)', surface2: 'var(--surface2)',
+                        border: 'var(--border)', ink: 'var(--ink)', muted: 'var(--muted)',
+                        blueacc: '#4C7DFF', violetacc: '#9C7CFF',
+                    },
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="font-body antialiased">
+
+    <header id="top" class="fixed top-0 inset-x-0 z-50 border-b border-border/70 backdrop-blur-md"
+        style="background-color: color-mix(in srgb, var(--base) 80%, transparent);">
+        <nav class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+            <a href="index.html" class="font-display font-bold text-lg tracking-tight text-ink">
+                Jarudet Mahae<span class="grad-text">.</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-muted">
+                <a href="index.html" class="hover:text-ink transition-colors nav-active">หน้าแรก</a>
+                <a href="about.html" class="hover:text-ink transition-colors">เกี่ยวกับ</a>
+                <a href="skills.html" class="hover:text-ink transition-colors">ทักษะ</a>
+                <a href="experience.html" class="hover:text-ink transition-colors">ประสบการณ์</a>
+                <a href="contact.html" class="hover:text-ink transition-colors">ติดต่อ</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="RESUME Jarudet Mahae.pdf" download="RESUME Jarudet Mahae.pdf"
+                    class="hidden sm:inline-flex items-center gap-2 rounded-md border border-border px-3.5 py-2 text-xs font-semibold text-muted hover:text-ink hover:border-blueacc transition-colors">
+                    Resume
+                </a>
+                <button id="themeToggle" aria-label="Toggle theme"
+                    class="grid place-items-center w-9 h-9 rounded-md border border-border text-muted hover:text-ink hover:border-blueacc transition-colors">
+                    <svg id="iconMoon" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                    <svg id="iconSun" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 hidden" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                </button>
+                <button id="menuToggle" aria-label="Toggle menu"
+                    class="md:hidden grid place-items-center w-9 h-9 rounded-md border border-border text-muted">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12" />
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <line x1="3" y1="18" x2="21" y2="18" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobileMenu" class="hidden md:hidden border-t border-border text-sm font-medium"
+            style="background-color: var(--base);">
+            <div class="px-5 py-4 flex flex-col gap-4 text-muted">
+                <a href="index.html" class="text-ink">หน้าแรก</a>
+                <a href="about.html" class="hover:text-ink">เกี่ยวกับ</a>
+                <a href="skills.html" class="hover:text-ink">ทักษะ</a>
+                <a href="experience.html" class="hover:text-ink">ประสบการณ์</a>
+                <a href="contact.html" class="hover:text-ink">ติดต่อ</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 pt-28 pb-16">
+        <div class="grid lg:grid-cols-[300px_1fr] gap-10 items-start">
+
+            <aside
+                class="reveal lg:sticky lg:top-24 rounded-2xl border border-border bg-surface p-7 text-center lg:text-left">
+                <div class="flex flex-col items-center lg:items-start">
+                    <div class="relative w-35 h-35 rounded-full grad-ring p-[5px] mb-5">
+                        <img src="profile-photo.png" alt="Jarudet Mahae"
+                            class="w-full h-full rounded-full object-cover" />
+                        <span class="absolute bottom-1 right-1 w-4 h-4 rounded-full bg-emerald-400 border-2 status-dot"
+                            style="border-color: var(--surface);"></span>
+                    </div>
+
+                    <h1 class="font-display text-2xl font-bold">Jarudet Mahae</h1>
+                    <p class="text-sm text-muted mt-1">จารุเดช มาแฮ</p>
+
+                    <span
+                        class="mt-4 inline-block rounded-md px-3 py-1.5 text-xs font-bold tracking-widest"
+                        style="background-color: var(--ink); color: var(--base);">
+                        IT SUPPORT
+                    </span>
+
+                    <div class="w-full mt-7 space-y-3.5 text-left">
+                        <a href="mailto:jarudet.pai@gmail.com" class="flex items-center gap-3 group">
+                            <span
+                                class="grid place-items-center w-9 h-9 rounded-lg border border-border text-muted group-hover:border-blueacc group-hover:text-blueacc transition-colors shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M22 6c0-1.1-.9-2-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6z" />
+                                    <path d="m22 6-10 7L2 6" />
+                                </svg>
+                            </span>
+                            <span
+                                class="text-sm text-ink group-hover:text-blueacc transition-colors break-all">jarudet.pai@gmail.com</span>
+                        </a>
+                        <a href="tel:0839153483" class="flex items-center gap-3 group">
+                            <span
+                                class="grid place-items-center w-9 h-9 rounded-lg border border-border text-muted group-hover:border-blueacc group-hover:text-blueacc transition-colors shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z" />
+                                </svg>
+                            </span>
+                            <span
+                                class="text-sm text-ink group-hover:text-blueacc transition-colors">083-915-3483</span>
+                        </a>
+                        <div class="flex items-start gap-3">
+                            <span
+                                class="grid place-items-center w-9 h-9 rounded-lg border border-border text-muted shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                            </span>
+                            <span class="text-sm text-muted leading-relaxed pt-1.5">ต.เชิงดอย อ.ดอยสะเก็ด<br>เชียงใหม่
+                                50220</span>
+                        </div>
+                    </div>
+
+                    <a href="contact.html"
+                        class="mt-7 w-full inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                        style="background: linear-gradient(90deg,#4C7DFF,#9C7CFF);">
+                        ติดต่อฉัน
+                    </a>
+                </div>
+            </aside>
+
+            <div class="space-y-12">
+                <section class="reveal pt-2">
+                    <p class="font-mono text-xs uppercase tracking-widest text-blueacc mb-3">สวัสดีครับ</p>
+                    <h2 class="font-display text-3xl sm:text-5xl font-bold leading-tight max-w-2xl">
+                        IT Support ที่ดูแลระบบให้นิ่ง <span class="grad-text">และช่วยงานสื่อสารให้ปัง</span>
+                    </h2>
+                    <p class="mt-5 max-w-xl text-muted leading-relaxed">
+                        IT Support ที่มีประสบการณ์ด้านการบริหารเครือข่าย LAN การแก้ปัญหาฮาร์ดแวร์ และการดูแลระบบ IT
+                        พื้นฐาน การสำรองข้อมูลระบบ CCTV และการตรวจสอบระบบอินเทอร์เน็ต
+                        พร้อมทักษะเสริมด้านสื่อดิจิทัลและงานกราฟิก
+                    </p>
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <a href="experience.html"
+                            class="inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                            style="background: linear-gradient(90deg,#4C7DFF,#9C7CFF);">
+                            ดูประสบการณ์ทำงาน
+                        </a>
+                        <a href="contact.html"
+                            class="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3 text-sm font-semibold text-ink hover:border-blueacc transition-colors">
+                            ติดต่อฉัน
+                        </a>
+                    </div>
+                </section>
+
+                <section class="reveal">
+                    <div class="grid sm:grid-cols-3 gap-5">
+                        <a href="about.html" class="rounded-xl border border-border bg-surface p-6 lift block">
+                            <span class="grid place-items-center w-10 h-10 rounded-lg mb-4"
+                                style="background: linear-gradient(135deg,#4C7DFF33,#9C7CFF33);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blueacc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg>
+                            </span>
+                            <h3 class="font-display font-semibold">เกี่ยวกับฉัน</h3>
+                            <p class="text-sm text-muted mt-1.5">ประวัติย่อและการศึกษา</p>
+                        </a>
+                        <a href="skills.html" class="rounded-xl border border-border bg-surface p-6 lift block">
+                            <span class="grid place-items-center w-10 h-10 rounded-lg mb-4"
+                                style="background: linear-gradient(135deg,#4C7DFF33,#9C7CFF33);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-violetacc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            </span>
+                            <h3 class="font-display font-semibold">ทักษะ</h3>
+                            <p class="text-sm text-muted mt-1.5">Network, Media &amp; Tools</p>
+                        </a>
+                        <a href="experience.html" class="rounded-xl border border-border bg-surface p-6 lift block">
+                            <span class="grid place-items-center w-10 h-10 rounded-lg mb-4"
+                                style="background: linear-gradient(135deg,#4C7DFF33,#9C7CFF33);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blueacc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                            </span>
+                            <h3 class="font-display font-semibold">ประสบการณ์</h3>
+                            <p class="text-sm text-muted mt-1.5">Work Experience</p>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <footer class="px-5 sm:px-8 py-10 border-t border-border">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-xs text-muted">© <span id="year"></span> Jarudet Mahae. All rights reserved.</p>
+            <div class="flex items-center gap-2 text-[11px] text-muted">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 status-dot"></span>
+                Chiang Mai, Thailand
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
